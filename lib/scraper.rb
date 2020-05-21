@@ -15,7 +15,11 @@ class Scraper
       student_info = {
         :name => name,
         :location => location,
+<<<<<<< HEAD
         :profile_url => profile
+=======
+        :profile => profile
+>>>>>>> 0236703dd1824c5da001be3c5bb7645193f4173a
       }
       students << student_info
       end
@@ -23,6 +27,7 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
+<<<<<<< HEAD
     student_profile = Nokogiri::HTML(open(profile_url))
 
     profile = {}
@@ -43,4 +48,10 @@ class Scraper
     profile[:bio] = student_profile.css("div.description-holder p").text
     profile
   end
+=======
+  #  html = File.read('https://learn-co-curriculum.github.io/student-scraper-test-page/')
+
+  end
+
+>>>>>>> 0236703dd1824c5da001be3c5bb7645193f4173a
 end
